@@ -56,5 +56,8 @@ class StudentViewController: UIViewController {
         //UIApplication.sharedApplication().endIgnoringInteractionEvents()
     }
 
+    @IBAction func onRefreshBtnPressed(sender: AnyObject) {
+        updateStudentData()
+    }
     
 }

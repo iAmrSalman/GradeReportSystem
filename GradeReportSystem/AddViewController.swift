@@ -26,6 +26,10 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         
         // Empty back button title
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
+        nameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
     }
 
     @IBAction func onAddBtnPressed(sender: AnyObject) {
@@ -51,7 +55,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         nameField.text = ""
         emailField.text = ""
         passwordField.text = ""
-
+        nameField.resignFirstResponder()
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
     }
     
     func startActivtyIndicator() {

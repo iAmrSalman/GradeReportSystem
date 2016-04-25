@@ -15,6 +15,7 @@ class DownloadManager {
             
             if let userDictionary = snapshot.value as? Dictionary<String, AnyObject> {
                 completion(User(uid: uid, dictionary: userDictionary))
+                DataService.ds.REF_USERS.childByAppendingPath(uid).removeAllObservers()
             }
         }
     }
@@ -24,6 +25,7 @@ class DownloadManager {
             
             if let gradeDictionary = snapshot.value as? Dictionary<String, AnyObject> {
                 completion(Grade(dictionadry: gradeDictionary))
+                DataService.ds.REF_GRADES.childByAppendingPath(uid).removeAllObservers()
             }
         }
     }
@@ -37,7 +39,7 @@ class DownloadManager {
                         users.append(User(uid: snap.key, dictionary: userDictionary))
                     }
                 }
-                
+                DataService.ds.REF_USERS.removeAllObservers()
                 completion(users)
             }
         }

@@ -26,6 +26,7 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
             <string>NotoSans</string>
@@ -329,9 +330,35 @@
                                     <constraint firstItem="6bR-dl-0eK" firstAttribute="leading" secondItem="ejg-P2-S17" secondAttribute="leadingMargin" id="g9Y-f8-5Q6"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HY-Z9-sYX" customClass="MaterialView" customModule="GradeReportSystem" customModuleProvider="target">
+                                <rect key="frame" x="20" y="396" width="560" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUy-zC-KGF" customClass="MaterialButton" customModule="GradeReportSystem" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="544" height="49"/>
+                                        <color key="backgroundColor" red="0.0" green="0.70588235290000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="14"/>
+                                        <state key="normal" title="Refresh">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onEditFinelBtnPressed:" destination="GBM-bV-Mr9" eventType="touchUpInside" id="9e0-Wv-V8R"/>
+                                            <action selector="onRefreshBtnPressed:" destination="q1P-yQ-fVY" eventType="touchUpInside" id="a3a-5K-PeK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="oUy-zC-KGF" firstAttribute="bottom" secondItem="6HY-Z9-sYX" secondAttribute="bottomMargin" id="1Ah-5F-WGU"/>
+                                    <constraint firstItem="oUy-zC-KGF" firstAttribute="leading" secondItem="6HY-Z9-sYX" secondAttribute="leadingMargin" id="8PA-yE-DCy"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="oUy-zC-KGF" secondAttribute="trailing" id="KbK-uD-rPf"/>
+                                    <constraint firstAttribute="height" constant="65" id="m4m-Jw-kQe"/>
+                                    <constraint firstItem="oUy-zC-KGF" firstAttribute="top" secondItem="6HY-Z9-sYX" secondAttribute="topMargin" id="yIy-x7-iFB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="6HY-Z9-sYX" firstAttribute="trailing" secondItem="viM-5Q-Fn7" secondAttribute="trailingMargin" id="7qQ-4Q-i73"/>
                             <constraint firstItem="doe-Hm-MFj" firstAttribute="top" secondItem="aBg-yV-mGU" secondAttribute="bottom" constant="8" id="9ED-rd-B6D"/>
                             <constraint firstItem="doe-Hm-MFj" firstAttribute="leading" secondItem="viM-5Q-Fn7" secondAttribute="leadingMargin" id="ASf-Yn-Yr8"/>
                             <constraint firstItem="ejg-P2-S17" firstAttribute="trailing" secondItem="viM-5Q-Fn7" secondAttribute="trailingMargin" id="C3a-mj-0M3"/>
@@ -339,9 +366,11 @@
                             <constraint firstItem="MBb-WZ-6nG" firstAttribute="trailing" secondItem="viM-5Q-Fn7" secondAttribute="trailingMargin" id="IbX-UK-GKp"/>
                             <constraint firstItem="ejg-P2-S17" firstAttribute="leading" secondItem="viM-5Q-Fn7" secondAttribute="leadingMargin" id="Ll7-7G-Dvi"/>
                             <constraint firstItem="aBg-yV-mGU" firstAttribute="trailing" secondItem="viM-5Q-Fn7" secondAttribute="trailingMargin" id="NcA-Kw-7kf"/>
+                            <constraint firstItem="6HY-Z9-sYX" firstAttribute="top" secondItem="ejg-P2-S17" secondAttribute="bottom" constant="20" id="Ocg-nE-nwk"/>
                             <constraint firstItem="MBb-WZ-6nG" firstAttribute="leading" secondItem="viM-5Q-Fn7" secondAttribute="leadingMargin" id="Qgy-Rb-Jwv"/>
                             <constraint firstItem="doe-Hm-MFj" firstAttribute="trailing" secondItem="viM-5Q-Fn7" secondAttribute="trailingMargin" id="W68-kh-9Ah"/>
                             <constraint firstItem="aBg-yV-mGU" firstAttribute="leading" secondItem="viM-5Q-Fn7" secondAttribute="leadingMargin" id="em8-T3-yJ7"/>
+                            <constraint firstItem="6HY-Z9-sYX" firstAttribute="leading" secondItem="viM-5Q-Fn7" secondAttribute="leadingMargin" id="gog-SY-cNs"/>
                             <constraint firstItem="ejg-P2-S17" firstAttribute="top" secondItem="doe-Hm-MFj" secondAttribute="bottom" constant="8" id="kEJ-8M-Kw3"/>
                             <constraint firstItem="aBg-yV-mGU" firstAttribute="top" secondItem="MBb-WZ-6nG" secondAttribute="bottom" constant="8" id="xSQ-PP-RuL"/>
                         </constraints>
@@ -937,6 +966,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tVf-bI-xNT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -956,6 +986,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c3T-R3-AUm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -975,6 +1006,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E4X-Lq-3if">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
